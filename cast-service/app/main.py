@@ -5,7 +5,7 @@ from api.db import metadata, engine, database
 
 metadata.create_all(engine)
 
-app = FastAPI()
+app = FastAPI(openapi_url='/api/v1/movies/openapi.json', docs_url='/api/v1/movies/docs')
 
 
 @app.on_event('startup')
